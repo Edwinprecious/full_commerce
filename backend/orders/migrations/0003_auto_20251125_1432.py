@@ -10,9 +10,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-         migrations.AddField(
-            model_name='order',
-            name='coupon',
-            field=models.CharField(max_length=50, null=True, blank=True),
-        ),
+        
     ]

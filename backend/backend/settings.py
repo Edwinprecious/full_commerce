@@ -110,6 +110,10 @@ TEMPLATES = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://full-commerce-gamma.vercel.app/", # your Vercel frontend URL 
+]
+
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 

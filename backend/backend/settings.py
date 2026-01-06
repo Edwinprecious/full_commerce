@@ -133,7 +133,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgres://postgres:udechukwu2002@localhost:5432/temu_commerce_db",
+        default=config('DATABASE_URL'),
         conn_max_age=600,
         ssl_require=False
     )

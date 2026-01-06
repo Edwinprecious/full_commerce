@@ -15,7 +15,7 @@ import os
 import cloudinary
 from pathlib import Path
 import dj_database_url
-from decouple import config
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,7 +47,8 @@ if not DEBUG:
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0'] # '0.0.0.0' this to tell django acccept any ip or run on all ip
 # ALLOWED_HOSTS = ['*'] 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*").split(",")
+# ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*").split(",")
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
 
 # print(os.getenv("CLOUDINARY_CLOUD_NAME"))
 

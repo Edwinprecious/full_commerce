@@ -51,10 +51,6 @@ if not DEBUG:
 # ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*").split(",")
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
 
-# print(os.getenv("CLOUDINARY_CLOUD_NAME"))
-
-print(config("CLOUDINARY_CLOUD_NAME"))
-
 
 # Application definition
 
